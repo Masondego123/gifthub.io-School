@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom right, #edf6ff, #cfe4ff);
+            min-height: 100vh;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            height: 56px;
+            background-color: #104b9e;
+            border-top: 5px solid #092f70;
+            border-bottom: 6px solid #082c68;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 8px 13px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .navbar a:hover {
+            background-color: #286bc0;
+        }
+
+        .navbar a.active {
+            background-color: #237bd3;
+        }
+
+        /* Portfolio buttons */
+        .portfolio-container {
+            width: 100%;
+            max-width: 1068px;
+            margin: 47px auto 0;
+            padding: 0 12px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .portfolio-button {
+            min-height: 62px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 12px 8px;
+            background-color: #e2f1ff;
+            border: 3px double #2878d5;
+            border-radius: 9px;
+            color: #0645a1;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .portfolio-button:hover {
+            background-color: #c5e2ff;
+            border-color: #0759b5;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive layout */
+        @media (max-width: 760px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .portfolio-container {
+                margin-top: 30px;
+            }
+
+            .navbar ul {
+                gap: 2px;
+            }
+
+            .navbar a {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar a {
+                padding: 7px 5px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="portfolio-container">
+        <div class="portfolio-grid">
+
+            <a href="form-elements.html" class="portfolio-button">
+                Form Elements
+            </a>
+
+            <a href="sample-calculator.html" class="portfolio-button">
+                Sample Calculator
+            </a>
+
+            <a href="discount-calculator.html" class="portfolio-button">
+                Discount Calculator
+            </a>
+
+            <a href="grade-12-cooper-schedule.html" class="portfolio-button">
+                Grade 12 Cooper Schedule
+            </a>
+
+            <a href="student-portal.html" class="portfolio-button">
+                Student Portal
+            </a>
+
+            <a href="student-array-table.html" class="portfolio-button">
+                Student Array Table
+            </a>
+
+            <a href="css-grid-demo.html" class="portfolio-button">
+                CSS Grid Demo
+            </a>
+
+            <a href="login-logic.html" class="portfolio-button">
+                Login Logic
+            </a>
+
+        </div>
+    </main>
+
+</body>
+</html>
